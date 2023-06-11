@@ -1,38 +1,163 @@
-.App {
+body {
+  background-color: #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  padding: 40px;
+  max-width: 300px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  animation: slideInDown 0.8s ease-in-out;
+}
+
+.logout{
+  padding: 12px;
+  width: 150px;
+  margin: 10px;
+  background-color: #B22583;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+.login h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 24px;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  animation: slideInUp 0.8s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.login input {
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.login button {
+  padding: 12px;
+  margin: 10px;
+  background-color: #B22583;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login button:hover {
+  background-color: #B22583;
+}
+
+/* Calendar Container */
+.calendar-container {
+  width: 100%;
+  height: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Calendar Header */
+.calendar-header {
+  background-color: #C1BD38;
+  color: #ffffff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Calendar Event */
+.calendar-event {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  animation: slideInUp 0.8s ease-in-out;
+}
+
+/* Calendar Event Title */
+.calendar-event-title {
+  font-weight: bold;
+  color: #C1BD38;
+}
+
+/* Calendar Event Time */
+.calendar-event-time {
+  color: #C1BD38;
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.student-calendar-event .event-time {
+  font-weight: bold;
+  color: #C1BD38;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
